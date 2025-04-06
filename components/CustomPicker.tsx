@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Modal, FlatList, Platform } from "react-native";
 import { theme } from "@/constants/theme";
 import { ChevronDown } from "lucide-react-native";
+import { useLanguageStore } from "@/stores/languageStore";
 
 interface PickerItem {
   label: string;
@@ -20,6 +21,8 @@ export const CustomPicker: React.FC<CustomPickerProps> = ({
   onValueChange,
 }) => {
   const [modalVisible, setModalVisible] = useState(false);
+  const { t } = useLanguageStore();
+
   const selectedItem = items.find(item => item.value === selectedValue);
 
   const handleSelect = (value: string) => {
@@ -34,7 +37,7 @@ export const CustomPicker: React.FC<CustomPickerProps> = ({
         onPress={() => setModalVisible(true)}
         activeOpacity={0.8}
       >
-        <Text style={styles.selectedText}>{selectedItem?.label || "Sélectionner"}</Text>
+        <Text style={styles.selectedText}>{selectedItem ? t(selectedItem.label) : t('picker.selectDefault')}</Text>
         <ChevronDown size={20} color={theme.colors.text} />
       </TouchableOpacity>
 
@@ -50,7 +53,7 @@ export const CustomPicker: React.FC<CustomPickerProps> = ({
           onPress={() => setModalVisible(false)}
         >
           <View style={styles.modalContent}>
-            <Text style={styles.modalTitle}>Sélectionnez un trajet</Text>
+            <Text style={styles.modalTitle}>{t('picker.selectRouteTitle')}</Text>
             <FlatList
               data={items}
               keyExtractor={(item) => item.value}
@@ -68,7 +71,7 @@ export const CustomPicker: React.FC<CustomPickerProps> = ({
                       item.value === selectedValue && styles.selectedOptionText,
                     ]}
                   >
-                    {item.label}
+                    {t(item.label)}
                   </Text>
                 </TouchableOpacity>
               )}

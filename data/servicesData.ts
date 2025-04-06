@@ -39,14 +39,14 @@ export interface BrandValues {
 }
 
 export const predefinedRoutes: PredefinedRoute[] = [
-  { id: 'p-p', label: 'Paris - Paris', prices: { eco: '35-40', business: 60, van: 65 } },
-  { id: 'prg-orly', label: 'Paris Rive Gauche - Orly', prices: { eco: 55, business: 75, van: 80 } },
-  { id: 'prd-orly', label: 'Paris Rive Droite - Orly', prices: { eco: 60, business: 80, van: 90 } },
-  { id: 'prg-cdg', label: 'Paris Rive Gauche - CDG / Bourget', prices: { eco: 70, business: 90, van: 100 } },
-  { id: 'prd-cdg', label: 'Paris Rive Droite - CDG / Bourget', prices: { eco: 65, business: 80, van: 100 } },
-  { id: 'cdg-orly', label: 'CDG / Bourget - Orly', prices: { eco: 85, business: 100, van: 120 } },
-  { id: 'p-beauvais', label: 'Paris - Beauvais', prices: { eco: 150, business: 180, van: 200 } },
-  { id: 'p-disney', label: 'Paris - Disney', prices: { eco: 85, business: 100, van: 135 } },
+  { id: 'p-p', label: 'route.p-p', prices: { eco: '35-40', business: 60, van: 65 } },
+  { id: 'prg-orly', label: 'route.prg-orly', prices: { eco: 55, business: 75, van: 80 } },
+  { id: 'prd-orly', label: 'route.prd-orly', prices: { eco: 60, business: 80, van: 90 } },
+  { id: 'prg-cdg', label: 'route.prg-cdg', prices: { eco: 70, business: 90, van: 100 } },
+  { id: 'prd-cdg', label: 'route.prd-cdg', prices: { eco: 65, business: 80, van: 100 } },
+  { id: 'cdg-orly', label: 'route.cdg-orly', prices: { eco: 85, business: 100, van: 120 } },
+  { id: 'p-beauvais', label: 'route.p-beauvais', prices: { eco: 150, business: 180, van: 200 } },
+  { id: 'p-disney', label: 'route.p-disney', prices: { eco: 85, business: 100, van: 135 } },
 ];
 
 export const hourlyRates: HourlyRate = {
@@ -58,20 +58,20 @@ export const hourlyRates: HourlyRate = {
 export const vehicleCategories: VehicleCategory[] = [
   { 
     id: 'eco', 
-    name: 'ECO', 
-    description: 'Confort et efficacité au meilleur prix. Idéal pour les déplacements professionnels et personnels.', 
+    name: 'vehicle.eco.name', 
+    description: 'vehicle.eco.description', 
     image: { uri: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800' } 
   },
   { 
     id: 'business', 
-    name: 'BUSINESS', 
-    description: 'Élégance et prestations haut de gamme. Une expérience premium pour vos déplacements importants.', 
+    name: 'vehicle.business.name', 
+    description: 'vehicle.business.description', 
     image: require('@/assets/images/business-assai.jpg')
   },
   { 
     id: 'van', 
-    name: 'VAN', 
-    description: 'Espace et confort pour les groupes. Parfait pour les familles ou les équipes professionnelles.', 
+    name: 'vehicle.van.name', 
+    description: 'vehicle.van.description', 
     image: require('@/assets/images/ak-drivers.jpeg')
   },
 ];
@@ -84,12 +84,12 @@ export const contactDetails: ContactDetails = {
 };
 
 export const brandValues: BrandValues = {
-  title: "ASAÏ ELITE CHAUFFEURS",
-  tagline: "Votre partenaire de confiance pour des déplacements d'exception.",
+  title: "brand.title",
+  tagline: "brand.tagline",
   points: [
-    "Fiabilité et Ponctualité",
-    "Chauffeurs Professionnels et Discrets",
-    "Véhicules Haut de Gamme",
-    "Service Personnalisé"
+    "brand.point1",
+    "brand.point2",
+    "brand.point3",
+    "brand.point4"
   ]
 };

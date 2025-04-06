@@ -13,7 +13,7 @@ export const LanguageSelector: React.FC = () => {
       activeOpacity={0.7}
     >
       <Text style={styles.languageText}>
-        {language === "fr" ? "EN" : "FR"}
+        {language.toUpperCase()}
       </Text>
     </TouchableOpacity>
   );

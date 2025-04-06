@@ -6,7 +6,7 @@ import { theme } from "@/constants/theme";
 import { useLanguageStore } from "@/stores/languageStore";
 
 export default function TabLayout() {
-  const { language, toggleLanguage } = useLanguageStore();
+  const { t } = useLanguageStore();
 
   return (
     <Tabs
@@ -21,28 +21,28 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Accueil",
+          title: t('tabs.home'),
           tabBarIcon: ({ color }) => <Home size={22} color={color} />,
         }}
       />
       <Tabs.Screen
         name="estimate"
         options={{
-          title: "Estimer",
+          title: t('tabs.estimate'),
           tabBarIcon: ({ color }) => <Calculator size={22} color={color} />,
         }}
       />
       <Tabs.Screen
         name="services"
         options={{
-          title: "Services",
+          title: t('tabs.services'),
           tabBarIcon: ({ color }) => <Car size={22} color={color} />,
         }}
       />
       <Tabs.Screen
         name="contact"
         options={{
-          title: "Contact",
+          title: t('tabs.contact'),
           tabBarIcon: ({ color }) => <Phone size={22} color={color} />,
         }}
       />

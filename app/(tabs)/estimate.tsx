@@ -47,14 +47,17 @@ export default function EstimateScreen() {
     
     if (serviceType === "route") {
       const route = predefinedRoutes.find(r => r.id === selectedRoute);
+      const translatedRouteLabel = route ? t(route.label) : '';
+      const translatedCategoryName = t(`vehicle.${vehicleCategory}.name`);
       body = t('estimate.emailBodyRoute')
-        .replace('{route}', route?.label || '')
-        .replace('{category}', vehicleCategory.toUpperCase())
+        .replace('{route}', translatedRouteLabel)
+        .replace('{category}', translatedCategoryName)
         .replace('{price}', `${estimatedPrice}€`);
     } else {
+      const translatedCategoryName = t(`vehicle.${vehicleCategory}.name`);
       body = t('estimate.emailBodyHourly')
         .replace('{hours}', hours.toString())
-        .replace('{category}', vehicleCategory.toUpperCase())
+        .replace('{category}', translatedCategoryName)
         .replace('{price}', `${estimatedPrice}€`);
     }
     
@@ -120,17 +123,17 @@ export default function EstimateScreen() {
             <Text style={styles.sectionTitle}>{t('estimate.vehicleCategory')}</Text>
             <View style={styles.radioGroup}>
               <RadioButton
-                label="ECO"
+                label={t('vehicle.eco.name')}
                 selected={vehicleCategory === "eco"}
                 onSelect={() => setVehicleCategory("eco")}
               />
               <RadioButton
-                label="BUSINESS"
+                label={t('vehicle.business.name')}
                 selected={vehicleCategory === "business"}
                 onSelect={() => setVehicleCategory("business")}
               />
               <RadioButton
-                label="VAN"
+                label={t('vehicle.van.name')}
                 selected={vehicleCategory === "van"}
                 onSelect={() => setVehicleCategory("van")}
               />

@@ -26,7 +26,8 @@ export default function ContactScreen() {
   };
 
   const handleWhatsApp = () => {
-    Linking.openURL("https://wa.me/33756861976");
+    const phoneNumber = contactDetails.phoneFormatted.replace(/\D/g, '');
+    Linking.openURL(`https://wa.me/33${phoneNumber}`);
   };
 
   const handleTelegram = () => {
@@ -52,26 +53,26 @@ export default function ContactScreen() {
             <Text style={styles.logoText}>ASAÏ</Text>
           </View>
           
-          <Text style={styles.companyName}>{brandValues.title}</Text>
+          <Text style={styles.companyName}>{t(brandValues.title)}</Text>
           
           <TouchableOpacity style={styles.contactItem} onPress={handlePhoneCall}>
             <Phone size={20} color={theme.colors.primary} />
-            <Text style={styles.contactText}>0756861976</Text>
+            <Text style={styles.contactText}>{contactDetails.phone}</Text>
           </TouchableOpacity>
           
           <TouchableOpacity style={styles.contactItem} onPress={handleEmail}>
             <Mail size={20} color={theme.colors.primary} />
-            <Text style={styles.contactText}>asai.elitechauffeur@gmail.com</Text>
+            <Text style={styles.contactText}>{contactDetails.email}</Text>
           </TouchableOpacity>
           
           <TouchableOpacity style={styles.contactItem} onPress={handleWhatsApp}>
             <MessageCircle size={20} color={theme.colors.primary} />
-            <Text style={styles.contactText}>WhatsApp</Text>
+            <Text style={styles.contactText}>{t('contact.whatsAppLabel')}</Text>
           </TouchableOpacity>
           
           <TouchableOpacity style={styles.contactItem} onPress={handleTelegram}>
             <MessageCircle size={20} color={theme.colors.primary} />
-            <Text style={styles.contactText}>Telegram</Text>
+            <Text style={styles.contactText}>{t('contact.telegramLabel')}</Text>
           </TouchableOpacity>
           
           <View style={styles.contactItem}>

@@ -47,7 +47,7 @@ export default function HomeScreen() {
             {brandValues.points.map((point, index) => (
               <View key={index} style={styles.valuePoint}>
                 <View style={styles.bullet} />
-                <Text style={styles.valueText}>{point}</Text>
+                <Text style={styles.valueText}>{t(`home.commitment.point${index + 1}`)}</Text>
               </View>
             ))}
           </View>

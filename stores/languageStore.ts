@@ -23,6 +23,10 @@ const translations: Record<Language, TranslationDictionary> = {
     'home.title': 'ASAÏ ELITE CHAUFFEURS',
     'home.tagline': 'Votre partenaire de confiance pour des déplacements d\'exception.',
     'home.engagement': 'Notre Engagement',
+    'home.commitment.point1': 'Fiabilité et Ponctualité',
+    'home.commitment.point2': 'Chauffeurs Professionnels et Discrets',
+    'home.commitment.point3': 'Véhicules Haut de Gamme',
+    'home.commitment.point4': 'Service Personnalisé',
     'home.estimate': 'Estimer un Trajet',
     'home.discover': 'Découvrir nos Services',
     
@@ -63,12 +67,59 @@ const translations: Record<Language, TranslationDictionary> = {
     'contact.hoursText': 'Nos services sont disponibles 24h/24 et 7j/7',
     'contact.booking': 'Réservation',
     'contact.bookingText': 'Pour garantir la disponibilité, nous vous recommandons de réserver votre chauffeur au moins 24h à l\'avance.',
+
+    // Tabs
+    'tabs.home': 'Accueil',
+    'tabs.estimate': 'Estimer',
+    'tabs.services': 'Services',
+    'tabs.contact': 'Contact',
+
+    // Routes (from servicesData.ts)
+    'route.p-p': 'Paris - Paris',
+    'route.prg-orly': 'Paris Rive Gauche - Orly',
+    'route.prd-orly': 'Paris Rive Droite - Orly',
+    'route.prg-cdg': 'Paris Rive Gauche - CDG / Bourget',
+    'route.prd-cdg': 'Paris Rive Droite - CDG / Bourget',
+    'route.cdg-orly': 'CDG / Bourget - Orly',
+    'route.p-beauvais': 'Paris - Beauvais',
+    'route.p-disney': 'Paris - Disney',
+    
+    // Vehicle Categories (from servicesData.ts)
+    'vehicle.eco.name': 'ECO',
+    'vehicle.eco.description': 'Confort et efficacité au meilleur prix. Idéal pour les déplacements professionnels et personnels.',
+    'vehicle.business.name': 'BUSINESS',
+    'vehicle.business.description': 'Élégance et prestations haut de gamme. Une expérience premium pour vos déplacements importants.',
+    'vehicle.van.name': 'VAN',
+    'vehicle.van.description': 'Espace et confort pour les groupes. Parfait pour les familles ou les équipes professionnelles.',
+
+    // Brand Values (from servicesData.ts) - Note: Some are duplicates from 'home' section, kept for clarity
+    'brand.title': 'ASAÏ ELITE CHAUFFEURS',
+    'brand.tagline': 'Votre partenaire de confiance pour des déplacements d\'exception.',
+    'brand.point1': 'Fiabilité et Ponctualité',
+    'brand.point2': 'Chauffeurs Professionnels et Discrets',
+    'brand.point3': 'Véhicules Haut de Gamme',
+    'brand.point4': 'Service Personnalisé',
+
+    // Picker Component
+    'picker.selectDefault': 'Sélectionner',
+    'picker.selectRouteTitle': 'Sélectionnez un trajet',
+
+    // Service Card Component
+    'serviceCard.hourlyRateLabel': 'Tarif horaire :',
+
+    // Contact Screen
+    'contact.whatsAppLabel': 'WhatsApp',
+    'contact.telegramLabel': 'Telegram',
   },
   en: {
     // Home
     'home.title': 'ASAÏ ELITE CHAUFFEURS',
     'home.tagline': 'Your trusted partner for exceptional transportation.',
     'home.engagement': 'Our Commitment',
+    'home.commitment.point1': 'Reliability and Punctuality',
+    'home.commitment.point2': 'Professional and Discreet Chauffeurs',
+    'home.commitment.point3': 'High-End Vehicles',
+    'home.commitment.point4': 'Personalized Service',
     'home.estimate': 'Estimate a Trip',
     'home.discover': 'Discover our Services',
     
@@ -109,6 +160,49 @@ const translations: Record<Language, TranslationDictionary> = {
     'contact.hoursText': 'Our services are available 24/7',
     'contact.booking': 'Booking',
     'contact.bookingText': 'To guarantee availability, we recommend booking your driver at least 24 hours in advance.',
+
+    // Tabs
+    'tabs.home': 'Home',
+    'tabs.estimate': 'Estimate',
+    'tabs.services': 'Services',
+    'tabs.contact': 'Contact',
+
+    // Routes (from servicesData.ts)
+    'route.p-p': 'Paris - Paris',
+    'route.prg-orly': 'Paris Left Bank - Orly',
+    'route.prd-orly': 'Paris Right Bank - Orly',
+    'route.prg-cdg': 'Paris Left Bank - CDG / Le Bourget',
+    'route.prd-cdg': 'Paris Right Bank - CDG / Le Bourget',
+    'route.cdg-orly': 'CDG / Le Bourget - Orly',
+    'route.p-beauvais': 'Paris - Beauvais',
+    'route.p-disney': 'Paris - Disney',
+
+    // Vehicle Categories (from servicesData.ts)
+    'vehicle.eco.name': 'ECO',
+    'vehicle.eco.description': 'Comfort and efficiency at the best price. Ideal for business and personal travel.',
+    'vehicle.business.name': 'BUSINESS',
+    'vehicle.business.description': 'Elegance and high-end services. A premium experience for your important journeys.',
+    'vehicle.van.name': 'VAN',
+    'vehicle.van.description': 'Space and comfort for groups. Perfect for families or professional teams.',
+    
+    // Brand Values (from servicesData.ts) - Note: Some are duplicates from 'home' section, kept for clarity
+    'brand.title': 'ASAÏ ELITE CHAUFFEURS',
+    'brand.tagline': 'Your trusted partner for exceptional transportation.',
+    'brand.point1': 'Reliability and Punctuality',
+    'brand.point2': 'Professional and Discreet Chauffeurs',
+    'brand.point3': 'High-End Vehicles',
+    'brand.point4': 'Personalized Service',
+
+    // Picker Component
+    'picker.selectDefault': 'Select',
+    'picker.selectRouteTitle': 'Select a route',
+
+    // Service Card Component
+    'serviceCard.hourlyRateLabel': 'Hourly rate:',
+
+    // Contact Screen
+    'contact.whatsAppLabel': 'WhatsApp',
+    'contact.telegramLabel': 'Telegram',
   }
 };
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, ImageSourcePropType } from "react-native";
 import { theme } from "@/constants/theme";
+import { useLanguageStore } from "@/stores/languageStore";
 
 interface ServiceCardProps {
   name: string;
@@ -15,14 +16,16 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   image,
   hourlyRate,
 }) => {
+  const { t } = useLanguageStore();
+
   return (
     <View style={styles.container}>
       <Image source={image} style={styles.image} resizeMode="cover" />
       <View style={styles.content}>
-        <Text style={styles.name}>{name}</Text>
-        <Text style={styles.description}>{description}</Text>
+        <Text style={styles.name}>{t(name)}</Text>
+        <Text style={styles.description}>{t(description)}</Text>
         <View style={styles.rateContainer}>
-          <Text style={styles.rateLabel}>Tarif horaire :</Text>
+          <Text style={styles.rateLabel}>{t('serviceCard.hourlyRateLabel')}</Text>
           <Text style={styles.rateValue}>{hourlyRate}€</Text>
         </View>
       </View>
