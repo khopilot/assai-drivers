@@ -22,7 +22,9 @@
         "backgroundColor": "#ffffff"
       }
     },
-
+    "web": {
+      "manifestPath": "./manifest.json"
+    },
     "plugins": ["expo-router"],
     "experiments": {
       "typedRoutes": true
