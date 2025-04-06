@@ -52,20 +52,24 @@ export default function TabLayout() {
 
 const styles = StyleSheet.create({
   tabBar: {
+    position: 'absolute',
+    bottom: 25,
+    left: 20,
+    right: 20,
+    height: 65,
+    borderRadius: 35,
     backgroundColor: theme.colors.white,
-    borderTopWidth: 1,
-    borderTopColor: theme.colors.border,
-    height: 60,
-    paddingBottom: 8,
-    paddingTop: 8,
-    elevation: 8,
+    paddingBottom: 5,
+    paddingTop: 5,
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: -2 },
-    shadowOpacity: 0.05,
-    shadowRadius: 3,
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.15,
+    shadowRadius: 10,
+    elevation: 10,
   },
   tabBarLabel: {
     fontFamily: theme.fonts.body.medium,
-    fontSize: 12,
+    fontSize: 11,
+    marginBottom: 2,
   }
 });
